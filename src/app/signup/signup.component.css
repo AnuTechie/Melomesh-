@@ -1,0 +1,273 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; 
+  }
+  span{
+    color: #dee4ea;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    /*background: linear-gradient(135deg, #8b00ff, #0c0c0c, #ff007f);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;*/
+    background: linear-gradient(135deg, #ebe5ef, #d36c6c, #57233d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    
+}
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logo img {
+    margin-bottom:1px;
+    
+}
+
+h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+   width: 100%;
+    padding: 10px;
+    background-color: #650544;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ac1e75;
+}
+
+a {
+  text-decoration: none;
+  color: #000407;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 20px; /* Add padding for better click area */
+  border: 2px solid transparent;
+  border-radius: 10px; /* Initial border */
+  transition: border-color 0.3s; /* Smooth transition for border color change */
+}
+
+a:hover {
+  border-color: #000407;
+  background-color: #ac1e75; /* Change border color on hover */
+}
+
+
+.footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.click-effect {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    animation: clickEffectAnim 0.8s ease-out;
+}
+
+p{
+    font-size: 15px;
+    color: #000000;
+}
+@keyframes clickEffectAnim {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.particle {
+  position: absolute;
+  width: 7px; /* Reduced size by 30% */
+  height: 7px; /* Reduced size by 30% */
+  background-color: rgb(241, 111, 194); /* Particle color */
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleAnimation 0.8s ease-out forwards;
+}
+
+@keyframes particleAnimation {
+  0% {
+      transform: scale(0); /* Start from a very small size */
+      opacity: 1;
+  }
+  100% {
+      transform: scale(10); /* Expand to a larger size */
+      opacity: 0; /* Fade out at the end */
+  }
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+/* Radio buttons for gender */
+.gender-container {
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  .gender-label {
+    align-items: center;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #d2d6da;
+  }
+  
+  .gender-input {
+    display: none;
+  }
+  
+  .gender-input + label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .gender-input + label:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #eceff1;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .gender-input:checked + label:before {
+    background-color: #dee4ea;
+  }
+  
+  /* Hide the default radio button */
+  .gender-input {
+    display: none;
+  }
+  
+  /* Show a custom radio button */
+  .gender-input + label:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #dfe3e7;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  /* Style the custom radio button when checked */
+  .gender-input:checked + label:before {
+    background-color: #d9dfe4;
+  }
+  
+  /* Style the text of the labels */
+  .gender-input + label {
+    color: #fff;
+  }
+/* Checkboxes */
+.checkbox-container {
+    margin-bottom: 20px;
+  }
+  
+  .checkbox-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .checkbox-input {
+    display: none;
+  }
+  
+  .checkbox-input + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 10px;
+  }
+  
+  .checkbox-input + label:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d6dade;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 3px;
+  }
+  
+  .checkbox-input:checked + label:before {
+    background-color: #d2d6da;
+  }
+  
+  .checkbox-input:checked + label:after {
+    content: '\2713'; /* Checkmark symbol */
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Color of the checkmark symbol */
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  /* Style the text of the labels */
+  .checkbox-input + label {
+    color: #fff;
+  }
+  #mytable{
+    border-spacing: 20px;
+    border-collapse: separate;
+  }

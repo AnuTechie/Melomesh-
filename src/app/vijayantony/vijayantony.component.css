@@ -1,0 +1,208 @@
+
+body{ background: linear-gradient(135deg, #c0b4c9, #d36c6c, #57233d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    
+    height: 100vh;
+
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+}
+body img{
+    width:300px;
+}
+    table {
+       border-spacing: 10px; /* Adjust this value to your desired spacing */
+    }
+    
+    header {
+        background-color: #f5f1f8;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+    td{
+        width: 15%;
+    }
+    header h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+    header img{
+        width: 150px;
+        
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 1.5em;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+    }
+    
+    form input {
+        padding: 10px;
+        border: 1px solid #fffafa;
+        margin-right: 10px;
+    }
+    
+    form button {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    main {
+        display: flex;
+        background: linear-gradient(135deg, #8b00ff, #0c0c0c, #ff007f);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+    
+    aside {
+        width: 20%;
+        padding: 20px;
+        background-color: #050505;
+    }
+    
+    aside h2 {
+        margin-bottom: 10px;
+    }
+    
+    aside ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    aside li {
+        margin-bottom: 10px;
+    }
+    
+    section {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    section h2 {
+        margin-bottom: 10px;
+    }
+    
+    .library-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        width: 95%;
+    }
+    
+    .library-item h3 {
+        margin: 0;
+    }
+    
+    .library-item button {
+        padding: 10px;
+    }
+    .song-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 90%;
+        color: #f0f0f0;
+        position: relative; /* Add position relative to make the play button absolute */
+        border: 1px solid #c26d6d; /* Add border around the song container */
+        padding: 5px; /* Add padding to create space between the content and the border */
+    }
+    .play-cont{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 50%;
+        position: relative; /* Add position relative to make the play button absolute */
+        border: 2px solid #af7bcd; /* Add border around the song container */
+        padding: 5px; 
+    }
+    .anchor img{
+        width:90%;
+        align-items: center;
+    }
+    .song-container img {
+        width: 50px; /* Adjust width as needed */
+        height: 50px; /* Adjust height as needed */
+    }
+    
+    .song-info {
+        margin-left: 10px;
+    }
+    
+    .song-info h3 {
+        margin: 5px 0;
+    }
+    
+    .play-button {
+        position: absolute;
+        top: 50%;
+        right: 10px; /* Adjust the position of the play button */
+        transform: translateY(-50%); /* Center the button vertically */
+        width: 30px;
+        height: 30px;
+        background-color: rgba(204, 137, 137, 0.5); /* Semi-transparent black background */
+        border-radius: 10%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Initially hide the play button */
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .song-container:hover .play-button {
+        opacity: 1; /* Show play button on hover */
+    }
+    
+    .play-button i {
+        color: white; /* Change the color of the play icon */
+    }
+    @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+    }
+    h1,h2,h3{
+        color: #f0f0f0;
+    }

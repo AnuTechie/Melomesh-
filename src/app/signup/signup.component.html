@@ -1,0 +1,78 @@
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="../assets/Untitled_design-removebg-preview.png" alt="Melomesh Logo" width="150"> 
+    </div>
+    <p>Already have an account?  <a href="/login">Login here</a></p>
+    <br>
+    <br>
+    <h2>Sign Up</h2>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="signup-form">
+      <div><input pattern ="[a-zA-Z]+" minlength="5" required type="text" name="username" #username="ngModel" [(ngModel)]="username1" placeholder="username" >
+      <div *ngIf="username.invalid">
+        <span *ngIf="username.touched && username.errors?.['required']">*required </span>
+        <span *ngIf="username.errors?.['minlength']">*5 char needed </span>
+        <span *ngIf="username.errors?.['pattern']">*pattern miss </span>
+    </div> </div>
+    <div >
+      
+      <input type="email" name="email"  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+      #email="ngModel" ngModel placeholder="Email" required>
+      <div *ngIf="email.invalid && email.touched">
+          <span *ngIf="email.errors?.['required']">* Required</span>
+          <span *ngIf="email.errors?.['pattern']">* Invalid email format</span>
+       
+      </div>
+      
+    </div>
+    <div>
+      <input type="password" minlength="8" required type="text" name="password"  #password="ngModel"  [(ngModel)]="pass" placeholder="Password" >
+      <div *ngIf="password.invalid && password.touched">
+        <span *ngIf="password.errors?.['required']">* Required</span>
+        <span *ngIf="password.errors?.['minlength']">* Minimum 8 characters required</span>
+      </div>
+    </div>
+    <div>
+      <input type="tel"  name="mobile" ngModel #mobile="ngModel" pattern="[0-9]{10}" [(ngModel)]="mob" placeholder="Mobile" required>
+      <div *ngIf="mobile.invalid && mobile.touched">
+        <span *ngIf="mobile.errors?.['required']">* Required</span>
+        <span *ngIf="mobile.errors?.['pattern']">* Invalid mobile number (should be 10 digits)</span>
+      </div>
+    </div>
+      <p>{{mobile.value | mypipe}}</p>
+      <div class="gender-container">
+        <table id="mytable">
+          <tr>
+            <td>
+              <span class="gender-label">Gender:</span>
+            </td>
+            <td >
+              <input type="radio" id="male" class="gender-input" name="gender" ngModel #gender="ngModel"  value="male" required>
+              <label for="male">Male</label>
+              <span *ngIf="mobile.errors?.['required']">* Required</span>
+            </td>
+            <td>
+              <input type="radio" id="female" class="gender-input" name="gender" ngModel #gender="ngModel"  value="female" required>
+              
+              <label for="female">Female</label>
+              <span *ngIf="mobile.errors?.['required']">* Required</span>
+            </td>
+          </tr>
+        </table> 
+      </div>
+    
+      <div class="checkbox-container">
+        <input type="checkbox" id="terms" class="checkbox-input" name="terms" required>
+        <label for="terms" class="checkbox-label">I agree to the terms and conditions</label>
+      </div>
+    
+      <button type="submit" [disabled]="form.invalid" id="10">Submit</button> 
+      <div *ngIf="show" class="validate-msg">{{ validateMsg }}</div>
+    </form>
+
+  </div>
+  <div class="footer">
+    &copy; 2024 Melomesh. All rights reserved.
+  </div>
+</body>
+

@@ -1,0 +1,62 @@
+body{
+    background: linear-gradient(135deg, #c0b4c9, #d36c6c, #57233d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    color: #e4e2e4;
+}
+.transaction-container {
+    max-width: 400px;
+   margin-left: 35%;
+   margin-top: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   background-color:rgb(107, 14, 65)   
+  }
+  
+  .transaction-container h2 {
+    margin-top: 0;
+  }
+  
+  .transaction-container form {
+    margin-top: 20px;
+  }
+  
+  .transaction-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .transaction-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .transaction-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #e4e2e4;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .transaction-container button:hover {
+    background-color: #a04ba8;
+  }
+  

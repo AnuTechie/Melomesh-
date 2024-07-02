@@ -1,0 +1,329 @@
+<body>
+    <header>
+        <img src="../assets/Untitled_design-removebg-preview.png"/>
+        <nav>     
+            <ul>
+                <li><a href="/delete">DeleteMyAccount</a></li>
+                <li><a href="#" (click)="logout()">Logout</a></li>
+                <li><a href="/premium">Premium</a></li>
+            </ul>
+        </nav>
+    </header>   
+    <main>
+        <aside class="sidebar">
+            <h1 style="color: aliceblue;">Welcome {{username}}</h1>
+            <!--<h2 style="color: aliceblue;">Your Library</h2>-->
+            <!--<form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search in your library....">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <br>
+            <br>
+            <ul>
+                <table id="t1">
+                    <tr>
+                        <td>
+                            <div class="song-container">
+                            <img src="song-cover.jpg" alt="Song cover">
+                            <div class="song-info">
+                            <h3>Song Title</h3>
+                            <p>Artist Name</p>
+                            <span class="play-button">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            </div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="song-container">
+                            <img src="song-cover.jpg" alt="Song cover">
+                            <div class="song-info">
+                            <h3>Song Title</h3>
+                            <p>Artist Name</p>
+                            <span class="play-button">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            </div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="song-container">
+                            <img src="song-cover.jpg" alt="Song cover">
+                            <div class="song-info">
+                            <h3>Song Title</h3>
+                            <p>Artist Name</p>
+                            <span class="play-button">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            </div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="song-container">
+                            <img src="song-cover.jpg" alt="Song cover">
+                            <div class="song-info">
+                            <h3>Song Title</h3>
+                            <p>Artist Name</p>
+                            <span class="play-button">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            </div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="song-container">
+                            <img src="song-cover.jpg" alt="Song cover">
+                            <div class="song-info">
+                            <h3>Song Title</h3>
+                            <p>Artist Name</p>
+                            <span class="play-button">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            </div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="song-container">
+                            <img src="song-cover.jpg" alt="Song cover">
+                            <div class="song-info">
+                            <h3>Song Title</h3>
+                            <p>Artist Name</p>
+                            <span class="play-button">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            </div></div>
+                        </td>
+                    </tr>
+                </table>
+                </ul>-->
+        </aside>
+        
+        <section id="your-library" >
+            <h2>Top Trending</h2>
+            <table id="t2">
+            <tr>
+                <td>
+                <div class="song-container" >
+                <img src="../assets/katchi.jpg" alt="Song cover">
+                <div class="song-info" id="1">
+                    <h3>Katchi Sera</h3>
+                    <p>Sai Abhyankkar
+                    </p>
+                    <span class="play-button" routerLink="/song" (click)="playSong('../assets/Katchi Sera.mp3','../assets/katchi.jpg') ">
+                        <i class="fas fa-play"></i>
+                    </span>
+                </div>
+            </div>
+            </td>
+            <td>
+                <div class="song-container">
+                    <img src="../assets/Kurchi-Madathapetti-Song-Singer (2).jpg" alt="Song cover">
+                    <div class="song-info" id="2">
+                        <h3>Madathapetti</h3>
+                        <p>Thaman, Sri Krishna, Sahiti Chaganti</p>
+                        <span class="play-button" routerLink="/song" (click)="playSong('../assets/Kurchi-Madathapetti-Mp3.mp3','../assets/Kurchi-Madathapetti-Song-Singer (2).jpg')">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                </div>
+                </td>
+                <td>
+                    <div class="song-container" >
+                        <img src="../assets/unakku thaan.jpg" alt="Song cover">
+                        <div class="song-info" id="3">
+                            <h3>Unakku thaan</h3>
+                            <p>Santhosh Narayanan, Dhvani Kailas</p>
+                            <span class="play-button" routerLink="/song" (click)="playSong('../assets/Unakku Thaan.mp3','../assets/unakku thaan.jpg')">
+                                <i class="fas fa-play"></i>
+                            </span>
+                        </div>
+                    </div>
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                <div class="song-container">
+                    <img src="../assets/vandha-edam-song-lyrics-image-srk-and-aniruth-music-jawan-song.jpg" alt="Song cover">
+                    <div class="song-info" id="4">
+                        <h3>Hayyoda</h3>
+                        <p>Arijit Singh, Shilpa Rao, Anirudh....</p>
+                        <span class="play-button" routerLink="/song" (click)="playSong('../assets/Hayyoda.mp3','../assets/vandha-edam-song-lyrics-image-srk-and-aniruth-music-jawan-song.jpg')">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                </div>
+                </td>
+                <td>
+                    <div class="song-container">
+                        <img src="../assets/kanmani.jpg" alt="Song cover">
+                        <div class="song-info" id="5">
+                            <h3>Kanmani Anbodu</h3>
+                            <p>Kamal Hassan, S.Janaki, Ilayaraja</p>
+                            <span class="play-button" routerLink="/song" (click)="playSong('../assets/Kanmani-Anbodu.mp3','../assets/kanmani.jpg')">
+                                <i class="fas fa-play"></i>
+                            </span>
+                        </div>
+                    </div>
+                    </td>
+                    <td>
+                        <div class="song-container">
+                            <img src="../assets/urugi.jpg" alt="Song cover">
+                            <div class="song-info" id="6">
+                                <h3>Urugi Urugi Ponadhadi</h3>
+                                <p>Siddhu Kumar,Anand Aravindakshan</p>
+                                <span class="play-button" routerLink="/song" (click)="playSong('../assets/Urugi Urugi.mp3','../assets/urugi.jpg')">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        </td>
+                        
+                </tr>
+            </table>
+            <h1>Made for {{username}}</h1>
+            <table id="t3">
+                <tr>
+                    <td>
+                        <a class="anchor" href="/vijayantony">
+                            <img src="../assets/vjlove.jpg" alt="Login or Signup">
+                        </a>
+                        
+                    </td>                    
+                    <td>
+                        <a class="anchor" href="/harris"><img src="../assets/harrismams.jpg"></a>
+                       
+                    </td>
+                    <td>
+                        <a class="anchor" href="/arr"><img src="../assets/arr.jpg"></a>
+                        
+                    </td>
+                    
+                </tr>
+                
+            </table>
+           <!-- <h1>Recommended for You...</h1>
+           
+            <h2>Your Library</h2>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>
+            <div class="library-item">
+                <h3>Artist</h3>
+                <p>Artist Name</p>
+                <button>Play</button>
+                <button>Follow</button>
+            </div>-->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Melomesh. All rights reserved.</p>
+    </footer>
+    <!--<script src="js/music.js"></script>!-->
+</body>
+

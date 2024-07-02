@@ -1,0 +1,100 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #ebe5ef, #d36c6c, #57233d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 300vh;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 90%;
+    font-size: 1.5em;
+    border-radius: 20%;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+  h1 span{
+    color:rgb(9, 9, 56);
+    font-size: 50px;
+  }
+  h1 {
+    margin-left: 40%;
+  }
+  
+  #all-users,
+  #show-user-form {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"] {
+    width: 30%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4f0c32;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #941570;
+  }
+  .hover-effect {
+    color: white;
+    background-color: #4f0c32;
+    border-radius: 4px;
+  }
+  .list {
+    max-height: 300px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  

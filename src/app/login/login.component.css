@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ebe5ef, #d36c6c, #57233d);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    
+}
+.container { 
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logo img {
+    margin-bottom: 20px;
+    size: 50px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color:#fff;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4f0c32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #941570;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #edeef0;
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 14px;
+}
+.click-effect {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    animation: clickEffectAnim 0.8s ease-out;
+}
+
+
+@keyframes clickEffectAnim {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.particle {
+  position: absolute;
+  width: 7px; /* Reduced size by 30% */
+  height: 7px; /* Reduced size by 30% */
+  background-color: rgb(241, 111, 194); /* Particle color */
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleAnimation 0.8s ease-out forwards;
+}
+
+@keyframes particleAnimation {
+  0% {
+      transform: scale(0); /* Start from a very small size */
+      opacity: 1;
+  }
+  100% {
+      transform: scale(10); /* Expand to a larger size */
+      opacity: 0; /* Fade out at the end */
+  }
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}

@@ -1,0 +1,44 @@
+<body>
+    <div class="transaction-container">
+    <h2>Upgrade to Premium</h2>
+    <p>Enjoy ad-free, offline, and high-quality music.</p>
+    <div>
+      <!--<input type="radio"    id="cardOption" name="paymentOption" value="card" [(ngModel)]="selectedOption">-->
+      <label for="cardOption">Credit/Debit Card</label>
+    </div>
+    <!--<div>
+      <input type="radio" id="qrCodeOption" name="paymentOption" value="qrCode" [(ngModel)]="selectedOption">
+      <label for="qrCodeOption">QR Code</label>
+    </div>-->
+    
+    <form #form="ngForm"  (ngSubmit)="onSubmit(form)">
+      
+        <!-- Card payment form -->
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" minlength="16" maxlength="16" name="cardNumber" #cardNumber="ngModel" ngModel required>
+        <div *ngIf="cardNumber.invalid">
+          <span *ngIf="cardNumber.touched && cardNumber.errors?.['required']">*required </span>
+          <span *ngIf="cardNumber.errors?.['minlength']">*invalid length </span>
+          
+      </div> 
+      <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" minlength="6"  name="expiryDate" #expiryDate="ngModel" ngModel required>
+        <div *ngIf="expiryDate.invalid">
+          <span *ngIf="expiryDate.touched && expiryDate.errors?.['required']">*required </span>
+          <span *ngIf="expiryDate.errors?.['minlength']">*invalid </span>
+          
+      </div> 
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" maxlength="3"  name="cvv" #cvv="ngModel" ngModel required>
+        <div *ngIf="cvv.invalid">
+          <span *ngIf="cvv.touched && cvv.errors?.['required']">*required </span>
+          
+      </div>
+     
+      
+      
+      <button type="submit" [disabled]="form.invalid"  >Upgrade</button>
+      <div *ngIf="show" class="validate-msg">{{validateMsg}}</div>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,62 @@
+<body>
+  <h1><span>U</span>ser <span>M</span>anagement</h1>    
+  <div>
+    <nav>     
+      <ul>
+        
+        <li><a href="#"  (click)="logout()" >Logout</a></li>
+          
+      </ul>
+  </nav>
+    <h2>Display all Users</h2>
+    
+<div class="list" >
+  <table border="1" >
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Gender</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.email }}</td>
+        <td>{{ user.username }}</td> 
+        <td>{{user.gender}}</td>
+      
+      </tr>
+    </tbody>
+  </table>
+   
+    <button type="submit" id="filter-users-button" (click)="getusers()">Display Users</button>
+  </div>
+  </div>
+    
+<div class="list1">
+  Username: <input type="text" id="username" name="username" [(ngModel)]="username"  placeholder="Enter username" >
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="user1">
+         
+          <td>{{ user1.username }}</td> 
+          <td>{{ user1.email }}</td>
+          <td>{{ user1.gender }}</td>
+        </tr>
+    </tbody>
+    </table>
+  <button type="submit" id="find-user-button" (click)="getone()">Find User</button>
+ 
+ 
+</div>
+    
+  </body>
+
